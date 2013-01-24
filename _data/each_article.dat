@@ -1,0 +1,13 @@
+        <div class="article diary">
+          <div class="diary_title">
+            <h2><a class="header" href="/archive/__articleid__">__articletitle__</a></h1>
+            <time datetime="__articledate__" pubdate>__articledate2__</time>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="| __articletitle__ - Seraphim" data-url="http://yuphiel.sakura.ne.jp/archive/__articleid__" data-count="horizontal" data-via="unohanaT" data-lang="ja">ツイート</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+          </div>
+          __articlecontent__
+          <div class="diary_footer">
+            カテゴリ：<a href="/category/__articlecategoryurl__">__articlecategory__</a>
+            <a href="/archive/__articleid__#comment">コメント(__commentcount__)</a>
+          </div>
+        __commentform__
+        </div>

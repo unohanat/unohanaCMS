@@ -1,0 +1,10 @@
+            <div id="c__commentnumber__" class="comment">
+              <p>
+                __commentmessage__
+              </p>
+              <p>
+                posted by __commentname__ <time datetime="__commentdate__" pubdate>__commentdate2__</time>
+                <a href="mailto:__commentmail__">mail</a>
+                <a href="__commenturl__">URL</a>
+              </p>
+            </div>

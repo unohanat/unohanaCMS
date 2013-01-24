@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="Shift_JIS">
+    <meta name="author" content="ユーザ">
+    <meta name="description" content="うのはなCMS"> 
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <!-- baseに使用するサイトのルートパスを書く（必須） -->
+    <base href="http://yuphiel.sakura.ne.jp/">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/cgi-bin/diary_footer.js"></script>
+    <script src="http://widgets.twimg.com/j/2/widget.js" charset="shift-jis"></script>
+    <title>__pagetitle__Seraphim</title>
+  </head>
+  
+  <body>
+    <div id="container_base">
+      <div id="header_container">
+        <hgroup id="page_header">
+          <h1><a class="header" href="/">うのはなCMS</a></h1>
+          <h2>うのはな透の自作ブログ</h2>
+        </hgroup>
+      </div> <!-- header_container -->
+      
+      <div id="contents_container">
+        __noticearticle__
+        __neighbornavi__
+        __eacharticle__
+        __neighbornavi__
+        <a href="__currenturl__#">▲ページの先頭に戻る</a>
+      </div> <!-- contents_container -->
+      
+      <div id="menu_container">
+        <div class="nav">
+          <ul id="">
+          </ul>
+          <h2>profile</h2>
+          <dl>
+            <dt>author</dt>
+            <dd>ユーザ</dd>
+            <dt>address</dt>
+            <dd>都道府県</dd>
+            <dt>site</dt>
+            <dd>サイト名</dd>
+            <dt>mail</dt>
+            <dd>
+              xxあっとyy.zz
+            </dd>
+          </dl>
+          <h2>最近の日記</h2>
+          <ul>
+          __lastarticle__
+          </ul>
+          <h2>最近のコメント</h2>
+          <ul>
+          __lastcomment__
+          </ul>
+          <h2>カテゴリー</h2>
+          <ul>
+          __categorylist__
+          </ul>
+          <h2>月別アーカイブ</h2>
+          <ul>
+          __montharchive__
+          </ul>
+          <h2>ブックマーク</h2>
+          <ul class="bookmark">
+            <li><a href="http://google.co.jp/">Google</a></li>
+          </ul>
+        </div> <!-- nav -->
+        
+        
+        <!-- ここから下はウィジェットなどをガシガシどうぞ -->
+        
+      <div id="footer_container">
+        <address>
+          &copy; User / All rights reserved.
+        </address>
+      </div> <!-- footer_container -->
+    </div> <!-- container_base -->
+  </body>
+</html>

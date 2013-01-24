@@ -1,0 +1,12 @@
+          <div id="comment">
+            <h3>この記事へのコメント</h3>
+            __eachcomment__
+            <h3>この記事へコメントする</h3>
+            <form action="archive/__articleid__" method="POST">
+              名前<br>   <input type="text" name="name" maxlength=20 placeholder="入力必須です" required><br>
+              メール<br> <input type="email" name="email"><br>
+              URL<br>    <input type="url" name="url"><br>
+              本文<br>   <textarea name="mes" rows=5 cols=40 placeholder="ここにコメントを入力します" maxlength=200 required></textarea><br>
+              <input type="submit" value="投稿する">
+            </form>
+          </div>

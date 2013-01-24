@@ -1,0 +1,31 @@
+#index.htmlがなかった場合の対応
+DirectoryIndex index.html viewer.cgi .ht
+
+#dat,log,csvにブラウザ経由でアクセスさせない
+<Files ~ "\.(dat|log|csv)$">
+deny from all
+</Files>
+
+#.htaccessと.plはCGI動作にする。これにより中身を見ることはできない
+AddHandler cgi-script htaccess
+AddHandler cgi-script pl
+AddHandler cgi-script .rb
+#AddHandler cgi-script .cgi
+#RSSフィードのMIMEタイプを設定する
+AddType application/rdf+xml rdf
+
+#ブログ用のmod_rewrite
+RewriteEngine on
+RewriteBase /
+RewriteRule archive/([0-9]+)$ viewer.cgi?archive+$1 [L]
+RewriteRule page/([0-9]+)$ viewer.cgi?page+$1 [L]
+RewriteRule category/(.*)/([0-9]+)$ viewer.cgi?category+$1+$2 [NE,L]
+RewriteRule category/(.*)$ viewer.cgi?category+$1 [NE,L]
+RewriteRule date/(.*)/([0-9]+)$ viewer.cgi?date+$1+$2 [L]
+RewriteRule date/(.*)$ viewer.cgi?date+$1 [L]
+
+#imgフォルダにアクセス
+RewriteCond img/%{REQUEST_FILENAME} -f
+RewriteRule ^.* - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule img/(.*)$ _archive/img/$1.jpg

@@ -1,0 +1,4 @@
+        <div class="neighbor_nav">
+          <a href="__nextid__">__nexttitle__</a> | 
+          <a href="__previd__">__prevtitle__</a>
+        </div>
